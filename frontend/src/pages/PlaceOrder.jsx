@@ -14,7 +14,7 @@ const PlaceOrder = () => {
 
   const [formData, setFormData] = useState({
     firstName: '',
-    LastName: '',
+    lastName: '',
     email: '',
     street: '',
     city: '',
@@ -25,9 +25,11 @@ const PlaceOrder = () => {
   })
 
   const onChangeHandler = (event) => {
+    
     const name = event.target.name;
     const value = event.target.value;
     setFormData(data => ({ ...data, [name]: value }))
+    console.log("BAHuablai");
 
   }
   const onSubmitHandler = async (event) => {
@@ -73,6 +75,8 @@ const PlaceOrder = () => {
       }
 
     } catch (error) {
+      console.log("jay shree Ram");
+      
       console.log(error);
       toast.error(error.message)
       
